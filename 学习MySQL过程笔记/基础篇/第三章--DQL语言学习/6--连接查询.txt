@@ -1,0 +1,92 @@
+1、连接查询
+ 等值连接
+	含义：又称多表查询，当查询的字段来源于多个表时，就会用到连接查询
+	笛卡尔乘积现象：表1有n行，表2有m行，结果=m*n行
+		发生原因：没有有效的连接条件
+		如何避免：添加有效的连接条件
+	分类：
+		按年代分类：
+			SQL92标准：仅仅支持内连接
+			SQL99标准【推荐】：支持内连接+外连接（左外和右外）+交叉连接
+		按功能分类：
+			内连接：
+				等值连接
+				非等值连接
+				自连接
+			外连接：
+				左外连接
+				右外连接
+				全外连接
+			交叉连接：
+				
+	为表起别名：
+		①提高语句整洁度
+		②区分多个重名的字段
+		注意：如果为表起了别名，则查询的字段就不能使用原来的表名去限定
+ 	案例：查询每个工种的工种名和员工的个数，并且按员工的个数排序
+		SELECT j.job_title,count(*)
+		FROM jobs j,employees e
+		WHERE j.job_id = e.job_id
+		GROUP BY job_title
+		ORDER BY count(*) DESC;
+	结论：
+		①多表等值连接的结果为多表的交集部分
+		②n表连接，至少需要n-1个连接条件
+		③多表的顺序没有要求
+		④一般需要为表起别名
+		⑤可以搭配前面介绍的所有句子使用，比如排序、分组、筛选
+ 非等值连接：
+	SELECT employee_id,salary,grade_salary
+	FROM employees e,grede_table g
+	WHERE salary BETWEEN g.min_salary AND g.max_salary
+	语法：
+		select 查询列表
+		from 表1 别名，表2 别名
+		where 非等值连接条件
+		【and 筛选条件】
+		【group by 分组字段】
+		【having 分组后的筛选】
+		【order by 排序字段】
+ 自连接：
+	SELECT e.employee_id,e.last_name,j.employee_id,j.manager_name
+	FROM employees e,employees j
+	WHERE e.employee_id = j.employee_id;
+	
+	语法
+		select 查询列表
+		from 表1 别名，表2 别名
+		where 等值连接条件
+		【and 筛选条件】
+		【group by 分组字段】
+		【having 分组后的筛选】
+		【order by 排序字段】
+
+ sql99内连接：
+	select 查询列表
+	from 表1 别名 【连接类型】
+	join 表2 别名
+	on 连接条件
+	【where 筛选条件】
+	【group by 分组】
+	【having 筛选条件】
+	【order by 排序列表】
+ 连接类型分类：
+	内连接（♥）：inner
+		特点：
+			①添加排序、分组、筛选
+			②inner可以忽略
+			③筛选条件放在shere后面，连接条件放在on后面，提高分离性，便于略读
+			④inner join连接和sql92语法中的等值连接效果是一样的，都是查询多表的交集
+	外连接：
+		左外（♥）：left 【outer】
+		右外（♥）：right 【outer】
+		全外：full 【outer】
+	交叉连接：cross
+2、外连接
+	应用场景：用于查询一个表中有，另一个表中没有的记录
+	特点：
+		①外连接的查询结果为主表中的所有记录，如果从表中有和它匹配的，则显示匹配值，如果没有和它匹配的，则显示null，外连接查询结果=内连接结果+主表中有而从表中没有的记录
+		②左外连接，left join左边的是主表，右外来凝结，right join右边的是主表
+		③左外和右外交换两个表的顺序，可以实现同样的效果
+ 
+		

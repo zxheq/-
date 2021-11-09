@@ -1,0 +1,11 @@
+1、Would you like to receive product updates and annoucements via email?
+
+2、Verify your account
+
+3、Make sure it's at least 15 characters OR at least 8 characters including a number and a lowercase letter.
+
+4、The file will have its original line endings in your working directory.
+
+5、use "git restore <file>... " to discard changes in working directory.
+
+6.use "git reset HEAD <file>..." to unstage.

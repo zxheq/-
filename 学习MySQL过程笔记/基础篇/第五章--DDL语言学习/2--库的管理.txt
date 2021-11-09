@@ -1,0 +1,15 @@
+1、库的创建
+	语法：
+		create database 库名；
+	案例：创建库Books
+		create database if not exists Books;	
+2、库的修改
+	（1）名字基本不修改，想要修改停止运行数据库，直接找到目录文件进行修改
+	（2）更改字符集
+		语法：alter database 库名 character set 修改的字符集；
+		例：	
+			alter database books character set gbk；
+3、库的删除
+	语法：drop database 库名；
+	例：
+		drop database if exists books；	

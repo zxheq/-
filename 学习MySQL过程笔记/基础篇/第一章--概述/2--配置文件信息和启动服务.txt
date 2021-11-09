@@ -1,0 +1,11 @@
+1、配置文件信息
+	位置：在与安装目录bin的同级下的my.ini文件,[mysqld]---服务端配置。
+	（1）default-character-set=utf8-----字符集选择了utf8
+	（2）port=3306----端口号
+	（3）basedir = "D:\Program Files\MySQL\MySQL Server 5.5"-----安装目录
+	（4）datadir = "D:\Program Files\MySQL\MySQL Server 5.5\data"-----文件目录
+	（5）default-storage-engine=INNODB-----存储引擎，用于执行SQL语句的
+2、MySQL的启动和停止---两种方式
+	（1）在计算机管理->服务和应用程序->服务->MySQL55
+	（2）管理员权限打开cmd->net start(或：stop) MySQL55
+	

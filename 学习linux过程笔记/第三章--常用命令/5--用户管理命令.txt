@@ -1,0 +1,9 @@
+1、用户管理命令：
+	（1）useradd（路径：/usr/sbin/useradd 权限：root 语法：useradd用户名 描述：添加新用户 ）
+	（2）passwd（路径：/usr/bin/passwd 权限：所有用户 语法passwd 用户名 描述：设置用户密码）
+	（3）who（路径：/usr/bin/who 权限：所有用户 语法：who 功能描述：查看用户登陆信息）
+			tty---表示本地终端
+			pts---远程终端
+			
+	（4）w（路径：/usr/bin/w 权限：所有用户 语法：w 描述：查看登陆用户详细信息）
+			ps：里面的信息很重要

@@ -1,0 +1,14 @@
+1、vim使用技巧：
+	（1）导入命令执行结果----- :r !命令 例如---:r !date（导入时间）；
+	（2）定义快捷键-----:map 快捷键 触发命令	例：
+		① :map ^P I#<ESC>---快捷命令“在本行行首输入#并退出（注意这里的^P是ctrl+v和ctrl+P）
+		② :map ^B 0x-----跳至行首删除一个字符
+	（3）连续行注释
+		①:n1,n2s/^/#/g---在n1至n2行的行首加入一个#号，并不询问
+		②:n1,n2s/^#//g
+		③:n1,n2s/^/\/\//g
+	（4）替换-----ab mymail samlee@lambrother.net(输入a的内容（mymail）后按空格键转换成b的内容（samlee@lambrother.net))
+	
+注意：部分使用技巧可以写入并保存到.vimrc文件（前面不用加冒号)
+	①普通用户：/home/username/.vimrc
+	②root用户：/root/.vimrc

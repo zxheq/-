@@ -1,0 +1,23 @@
+修改语句
+	（1）修改单表的记录♥
+		语法：
+			update 表名
+			set 列=新值，列=新值，......
+			where 筛选条件;
+		案例一：修改beauty表中潘的女神电话为1391111
+			update beauty
+			set phone = ‘1391111’
+			where name like '潘%';
+	
+	（2）修改多表的记录
+		sql99语法：
+			update 表1 别名
+			inner|left|right join 表2 别名
+			on 连接条件
+			set 列=值，......
+			where 筛选条件;
+		案例：修改张无忌的女朋友的手机号为112
+			update boys bo
+			inner join beauty b on b.friend_id = bo.id
+			set b.phone = ‘112’
+			where boyName = '张无忌';	

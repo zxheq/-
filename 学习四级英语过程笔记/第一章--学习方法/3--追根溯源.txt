@@ -1,0 +1,55 @@
+pro-- 向前，pre-- 在...前
+	promise
+	profit
+	preface
+	previous
+	prefix
+
+com-- 共同的
+	compose
+	connect
+	combine
+	cooperation
+	
+-ate
+	nominate
+	formulate
+	
+-ify
+	notify-notice
+	modify
+
+-ee
+	employee
+	trainee
+	refugee
+
+-ness
+	happiness
+	loneliness
+	selfishness
+
+-ful , -less
+	useful - useless
+	meaningful - meaningless
+	brainless
+	fellowless
+	hopeless
+
+-ous
+	glorious
+	serious
+	numerous
+	
+-able
+	changeable
+	appreciable
+	acceptable
+	unacceptable
+	believable
+	unbelievable
+	payable
+	accounts payable
+
+	
+	

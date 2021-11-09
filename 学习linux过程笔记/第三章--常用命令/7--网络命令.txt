@@ -1,0 +1,29 @@
+1、网络命令：
+	（1）write（路径：/usr/bin/write 权限：所有用户 语法：write<用户名> 描述：给用户发信息，以Ctrl+D保存结束）ps：给在线用户发消息
+	（2）wall（路径：/usr/bin/wall 权限：所有用户 语法：wall [message] 描述：发广播消息）
+	（3）ping（路径：/bin/ping 权限：所有用户 语法：ping [-c] IP地址 描述：测试网络连通性）
+		-c---指发送次数
+	（4）ifconfig-----interface configure（路径：/sbin/ifconfig 权限：root 语法：ifconfig 网卡名称 IP地址 描述：查看和设置网卡信息）
+		lo---回访网卡，用来本机通信和测试的，地址是固定的
+	（5）mail（路径：/bin/mail 权限：所有用户 语法：mail [用户名] 描述：查看发送电子邮件）ps：查看邮件直接输入mail就行
+	（6）last（路径：/usr/bin/last 权限：所有用户 语法：last 描述：列出目前与过去登入系统的用户信息）
+	（7）lastlog（路径：/usr/bin/lastlog 权限：所有用户 语法：lastlog 描述：查看所有用户最后一次登陆时间）
+			lastlog -u 520（用户id）
+	（8）traceroute（路径：/bin/tranceroute 权限：所有用户 语法：tranceroute [网站] 描述：显示数据包到主机之间的路径）
+	（9）netstat（路径：/bin/netstat 权限：所有用户 语法：netstat [选项] 描述：显示网络相关信息）
+		-t-----TCP协议
+		-u-----UDP协议
+		-l-----监听
+		-r-----路由
+		-n-----显示ip地址和端口号
+		-tlun---查看本机监听的端口
+		-an---查看本机所有的网络连接
+		-rn---查看本机路由表
+	（10）setup（路径：/usr/bin/setup 权限：所有用户 语法：setup 描述：配置网络）
+		ps：支持防火墙配置、网络配置、系统服务配置、验证配置
+	（11）service network restart(描述：重新启动网络服务器）
+	（12）mount（路径：/bin/mount 权限：所有用户 语法：mount [-t 文件系统] 设备文件名 挂载点 
+		①先创建挂载点（空目录）：mkdir /mnt/cdrom
+		②挂载：mount -t iso9660 /dev/sr0 /mnt/cdrom(ps:iso9660是默认方式，可以省略；如果已经挂载过，需要umount /dev/sr0卸载）
+	（13）umount(描述：卸载挂载点）
+	

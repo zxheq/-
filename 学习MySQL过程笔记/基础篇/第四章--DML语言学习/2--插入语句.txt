@@ -1,0 +1,39 @@
+插入语句
+	语法：
+		insert into 表名(列名,......) values (值1,......)
+	方法一：
+		（1）插入的值的类型要与列的类型一致或兼容
+			insert into beauty(id,name,sex,borndate,girlfriend)
+			values(101,'何彰熙','男','1997-4-1','无');
+		（2）不可为null的列必须插入值，可以为null的列如何插入值？
+			方式一：
+				insert into beauty(id,name,sex,borndate,girlfriend)
+				values(101,'何彰熙','男','1997-4-1',null);
+			方式二：
+				insert into beauty(id,name)
+				values(101,'何彰熙');
+		（3）列的顺序可以调换
+			insert into beauty(name,id)
+			values('何彰熙',101);
+		（4）列数和值的个数必须一致
+		（5）可以省略列名，默认所有列，而且列的顺序和表中列的顺序一致
+			insert into beauty
+			values(101,'何彰熙','男','1997-4-1','无');
+	方法二：
+		语法：
+			insert into 表名
+			set 列名=值，列名=值......
+			列：
+				insert into beauty
+				set name = ‘何彰熙',id = 101;
+	两种方法对比：
+		①方式一支持插入多行,方式二不支持
+			insert into beauty(name,id)
+			values('何彰熙',101),
+			('何雪玉',102);
+		②方式二支持字查询，方式二不支持
+			insert into beauty(name,id)
+			select '何彰熙',101;
+		
+			
+				

@@ -1,0 +1,47 @@
+1、表的创建
+	语法：
+		create table 表名（
+			列名 列的类型【（长度）约束】,
+			列名 列的类型【（长度）约束】,
+			...
+			列名 列的类型【（长度）约束】
+		);
+	案例：创建表book
+		create table book(
+			id int,
+			bName varchar(20),
+			price double,
+			authorId int,
+			publicshDate datetime
+		);
+2、表的修改
+	（1）修改列名
+		语法：alter table 表名 change 【column】 旧列名 新列名 新列名数据类型；
+		例：
+			alter table book change column publishdate pubdate datetime;
+	（2）修改列的类型或约束
+		语法：alter table 表名 modify column 列名 数据类型;
+		例：
+			alter table book modify column pubdate timestamp;
+	（3）添加新列
+		语法：alter table 表名 add column 列名 数据类型 【first|after 字段名】;
+		例：
+			alter table book add column annual double;			
+	（4）删除列
+		语法：alter table 表名 drop column 列名;
+		例：
+			alter table book drop column annual;
+	（5）修改表名	
+		 语法：alter table 表名 rename 【to】 新表名;
+		例：
+			alter table book rename to newbook;
+3、表的删除
+	语法：drop table if exists 表名;
+4、表的复制
+	（1）仅仅复制表的结构 
+		create table copy like newbook;
+	（2）复制表的结构+数据
+		create table copy2 select * from newbook;
+	（3）仅仅复制某些字段
+		create tabele copy3 select id,au_name from newbook where 0;
+	

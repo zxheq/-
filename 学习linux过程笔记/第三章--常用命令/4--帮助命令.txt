@@ -1,0 +1,8 @@
+1、帮助命令
+	（1）man-----manual（路径：/usr/bin/man 权限：所有用户 语法：man [命令或配置文件] 描述：获得帮助信息）
+		ps：优先获取命令帮助信息，想要获取配置信息要加入一个5 例：man 5 passwd
+	（2）whatis (路径：/usr/bin/whatis 语法：whatis [命令] 描述：获取命令的描述信息）
+	（3）apropos(路径：/usr/bin/apropos 语法：apropos [配置文件] 描述：查看配置文件的描述信息）
+	（4）info-------------跟man大同小异
+	（5）help（路径：Shell内置命令 权限：所有用户 语法：help [命令] 描述：获得Shell内置命令的帮助信息）
+	

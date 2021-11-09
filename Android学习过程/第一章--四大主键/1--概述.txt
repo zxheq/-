@@ -1,0 +1,6 @@
+1、Android最基本的四大组件
+	（1）Activity--活动
+	（2）Service--服务
+	（3）ContentProvider--内容提供者
+	（4）BroadcastReceiver--广播
+	四大组件必须在AndroidMainfest.xml文件中声明

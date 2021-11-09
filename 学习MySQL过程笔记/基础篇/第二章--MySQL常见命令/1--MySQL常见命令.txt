@@ -1,0 +1,26 @@
+1、常见命令----格式：命令 参数 选项 + ";"
+	（1）show-----显示当前路径信息，类似与Linux的ls
+		例：show databases;
+	（2）use-----切换路径，类似与Linux的cd
+		例：use test;
+	（3）from-----不切换路径情况下访问其它路径
+		例：show tables from mysql;
+	（4）select-----查看路径（或信息）
+		例：select database();
+	（5）create table-----创建表
+		例：create table stuinfo(
+		->id int,
+		->name varchar(20));-------创建一个学生信息表
+	（6）desc-----描述文件属性；
+		例：desc stuinfo;
+	（7）select *from----查看文件数据
+		例：select *from stuinfo;-----查看学生信息表的数据
+	（8）insert into-----插入信息
+		例：insert into stuinfo(id,name) values(1,"hzx");
+	（9）update -----更新（修改）数据；
+		例：update stuinfo set name='lilei' where id=3;(这里的id必须是表中已经含有的数据）
+	（10）delete from -----删除来自某个文件的数据；
+		例：delete from stuinfoi where my_Id=2;
+	（11）select version();-----查看当前版本，或者在退出mysql后输入mysql --version
+	
+	

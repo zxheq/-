@@ -1,0 +1,19 @@
+1、权限管理命令：
+	（1）chmod-----change the permissions mode of a file (路径：/bin/chmod 权限：所有用户 语法：chmod [{ugoa}{+-=}{rwx}] [文件或目录] || [mode=421] [文件或目录])
+		-R----递归修改
+	权限注意事项：
+		只有所有者和root能更改权限
+		file:	r:cat/more/tac/less/head/tail
+			w:vim
+			x:script command
+		directory	r:ls
+			w:touch/mkdir/rmdir/rm
+			x:cd
+	（2）chown-----change file ownership(路径：/bin/chown 执行权限：所有用户 语法：chown [用户][文件或目录] 描述：改变文件或目录的所有者）ps：只有root权限下才可修改
+	（3）useradd（语法：user [要添加的用户名] 描述：添加一个新用户）
+	（4）groupadd(语法：group [要添加的组名] 描述：添加一个组）
+	（5）chgrp-----change group(语法：chgrp [要给与的组] [文件名] 描述：改变文件或目录的所属组]
+	（6）umask-----the user file-creation mask(路径 ：shell内置命令 权限：所有用户 语法：umask [-S] 描述：显示、设置文件的缺省权限）
+		-S-----以rwx形式显示新建文件缺省权限
+		ps：即使umask有x权限，新建的文件也没有x权限  ，可以修改缺省权限，但不建议
+			

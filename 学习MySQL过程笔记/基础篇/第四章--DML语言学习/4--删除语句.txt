@@ -1,0 +1,30 @@
+删除语句
+	方式一：delete
+		语法：
+			①单表的删除♥
+			delete from 表名 where 筛选条件
+			案例：删除删除手机号以9结尾的女神信息
+				delete from beauty
+				where phone like '%9';
+			②多表的删除
+			sql99语法：
+				delete 表1的别名，表2的别名
+				from 表1 别名
+				inner|left|right join 表2 别名 on 连接条件
+				where 筛选条件;
+			案例：删除张无忌的女朋友的信息
+				delete be
+				from boys b
+				inner join beauty be on be.boyfriend_id = b.id
+				where b.boyname = '张无忌';
+	方法二：truncate
+		语法：truncate table 表名;
+		场景：不能加where条件，只能在删除表的时候用。
+			truncate table boys;
+	方法对比：♥【面试题】
+		①delete可以加where条件，truncate不能加
+		②truncate删除，效率要高一丢丢
+		③如果要删除的表中有自增长列，如果用delete删除后，再插入数据，字增长列的值从断点开始，而truncate删除后，再插入数据，自增长列的值从1开始
+		④truncate删除没有返回值，delete删除有返回值
+		⑤truncate删除不能回滚，delete删除不能回滚	
+		

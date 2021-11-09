@@ -1,0 +1,37 @@
+1、基础查询：
+	启用之前应该先打开库-----例：USE test;
+	语法：select 查询列表 from 表名；
+	特点：（1）查询的列表可以是：表中的字段、常量值、表达式、函数
+	          （2）查询的结果是一个虚拟表格
+	（1）查询表中的单个字段
+		SELECT last_name FROM employees;(可以点击表中的栏位的字段直接添加）
+	（2）查询表中的多个字段
+		SELECT last_name,salary,email FROM employees;
+	（3）查询表中的所有字段
+		SELECT * FROM employees;
+	注意 `NAME` 中的 ` 着重号主要是为了区分关键字和字段的区分
+	（4）查询常量值
+		SELECT 100;
+		SELECT  'john';
+	（5）查询表达式
+		SELECT 100*98;
+	（6）查询函数
+		SELECT VERSION();
+	（7）起别名
+		方式一：
+		SELECT 100%98 AS 结果;
+		SELECT last_name AS 姓,first_name AS 名 FROM employees;
+		方式二：
+		SELECT last_name 姓，first_name 名 FROM employees;
+	（8）去重
+		SELECT DISTINCT department_id FROM employees;
+	（9）+号的作用
+	SELECT '123'+100; 输出223 ，只要其中一方为字符串，试图将字符串型转换成字符型
+	SELECT 'jojo'+100;输出100，转换失败则将字符数值转换成0；
+	SELECT null +100;输出null，只要其中一方为NULL，则输出结果肯定为NULL；
+	（10）字符连接函数----CONCAT()；
+		SELECT CONCAT(last_name,first_name) AS 姓名 FROM employees;
+	（11）空值代替-----IFNULL
+		SELECT IFNULL(first_name,'空') FROM stuinfo;
+
+		

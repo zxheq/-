@@ -1,0 +1,10 @@
+1、缓存速度
+	硬盘<内存<高速缓存<寄存器
+	register int a = 10;//建议把a定义成寄存器
+	union---联合共用体
+	typedef---类型重定义
+		typedef unsigned int u_int;
+		un_int num1 = 10;
+	extern---声名外部符号的
+
+	ctrl + z = EOF	

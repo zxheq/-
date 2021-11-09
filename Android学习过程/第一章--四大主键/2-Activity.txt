@@ -1,0 +1,13 @@
+1、Activity概览
+	Activity主要负责与用户进行交互，是每位Android开发必须掌握的知识点。
+
+2、Activity的继承关系
+	java.lang.Object
+	->android.content.Context
+	->android.content.ContextWrapper
+	->android.view.ContextThemeWrapper
+	->android.app.Activity
+
+3、Activity的周期--影响到与用户的交互
+	
+	
