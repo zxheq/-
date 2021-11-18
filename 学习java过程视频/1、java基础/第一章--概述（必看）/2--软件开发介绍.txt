@@ -18,11 +18,12 @@
 	java ME --以前java小游戏
 
 5、JDK、JRE、JVM的关系
-	JDK = JRE +开发集工具
+	JDK = JRE +开发集工具（java.exe , javac.exe , javadoc.exe);
 	JRE = JVM + Java SE 标准类库
 
 6、path环境变量原理
 	在path环境变量配置后，执行文件时如果在用户路径下找不到该文件，就会跳转到path环境变量下的目录寻找。
+	目的：为了在每一个盘符都能找到该应用程序
 
 7、文档注释解析命令行
 	javadoc -d [新建文件夹名] -author -version [.java文件]

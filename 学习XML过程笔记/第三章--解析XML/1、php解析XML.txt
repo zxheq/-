@@ -1,0 +1,6 @@
+1、php解析xml
+	simplexml_load_file();返回一个对象
+	原理：
+		①读取XML文档到内存
+		②形成DOM树
+		③由DOM树生成对象并返回
